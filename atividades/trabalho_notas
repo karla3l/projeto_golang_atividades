@@ -1,0 +1,76 @@
+package main
+
+import "fmt"
+
+func main() {
+	boletim()
+} //DISCIPLINAS: portugues | matematica | geografia | ciencia | historia
+func boletim() {
+	// VARIAVEIS PORTUGUES
+	var somaProvaPortugues float32
+	var mediaProvaPortugues float32
+	var somaTrabalhoPortugues float32
+	var mediaTrabalhoPortugues float32
+	var mediaGeralPortugues float32
+	//*******************************************************************
+	// VARIAVEIS MATEMATICA
+	var somaProvaMatematica float32
+	var mediaProvaMatematica float32
+	var somaTrabalhoMatematica float32
+	var mediaTrabalhoMatematica float32
+	var mediaGeralMatematica float32
+	//*******************************************************************
+	// CÓDIGO PORTUGUES
+	for i := 0; i < 3; i++ {
+		var nota1Portugues float32
+		fmt.Printf("Digite a nota(subnota) da prova de portugues: \t")
+		fmt.Scan(&nota1Portugues)
+		somaProvaPortugues = somaProvaPortugues + nota1Portugues
+		mediaProvaPortugues = somaProvaPortugues / 3
+	}
+	for j := 0; j < 3; j++ {
+		var nota2Portugues float32
+		fmt.Printf("Digite a nota(subnota) do trabalho de portugues: \t")
+		fmt.Scan(&nota2Portugues)
+		somaTrabalhoPortugues = somaTrabalhoPortugues + nota2Portugues
+		mediaTrabalhoPortugues = somaTrabalhoPortugues / 3
+	}
+	mediaGeralPortugues = (mediaProvaPortugues + mediaTrabalhoPortugues) / 2
+	//*******************************************************************
+	//CÓDIGO MATEMATICA
+	for k := 0; k < 3; k++ {
+		var nota1Matematica float32
+		fmt.Printf("Digite a nota(subnota) da prova matematica: \t")
+		fmt.Scan(&nota1Matematica)
+		somaProvaMatematica = somaProvaMatematica + nota1Matematica
+		mediaProvaMatematica = somaProvaMatematica / 3
+	}
+	for l := 0; l < 3; l++ {
+		var nota2Matematica float32
+		fmt.Printf("Digite a nota(subnota) do trabalho matematica:  \t")
+		fmt.Scan(&nota2Matematica)
+		somaTrabalhoMatematica = somaTrabalhoMatematica + nota2Matematica
+		mediaTrabalhoMatematica = somaTrabalhoMatematica / 3
+	}
+	mediaGeralMatematica = (mediaProvaMatematica + mediaTrabalhoMatematica) / 2
+	//*******************************************************************
+
+	//-------------------------------------------------------------------
+	fmt.Printf("\n \t NOTAS DE PORTUGUES E MÉDIA FINAL \t \n")
+	fmt.Printf("Média das notas das provas de portugues --> \t")
+	fmt.Println(mediaProvaPortugues)
+	fmt.Printf("Média das notas(nota dos trabalhos de portugues --> \t")
+	fmt.Println(mediaTrabalhoPortugues)
+	fmt.Printf("A nota final de portugues --> \t")
+	fmt.Println(mediaGeralPortugues)
+	fmt.Printf("\n ------------------------------------------------------- \n")
+	//-------------------------------------------------------------------
+	fmt.Printf("\n \t NOTAS DE MATEMATICA E MÉDIA FINAL \t \n")
+	fmt.Printf("Média das notas das provas de matematica --> \t")
+	fmt.Println(mediaProvaMatematica)
+	fmt.Printf("Média das notas(nota dos trabalhos de matematica --> \t")
+	fmt.Println(mediaTrabalhoMatematica)
+	fmt.Printf("A nota final de matematica --> \t")
+	fmt.Println(mediaGeralMatematica)
+	fmt.Printf("\n ------------------------------------------------------- \n")
+}

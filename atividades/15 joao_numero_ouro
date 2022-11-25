@@ -1,0 +1,30 @@
+package main
+
+import "fmt"
+
+func main() {
+	ouro()
+}
+func ouro() {
+  var n int
+  fib := 0
+  aux := 0
+  var ouro float64
+  
+		fmt.Printf("Digite um numero para calcular a sequencia de Fibonacci: \t")
+		fmt.Scan(&n)
+
+     for fib=1; fib<100; fib++ { 
+        
+        fmt.Printf("%d-", fib)
+        fib = fib + aux              
+        aux = n
+        n = fib     
+        ouro = float64(n)/float64(n) 
+    
+    }
+    if ouro == 1.6180 {
+		fmt.Printf("%f é um número de ouro \n", ouro)
+    	}
+}
+
